@@ -1,7 +1,7 @@
 package Class::DBI::Plugin::AggregateFunction;
 use strict;
 use vars qw/$VERSION/;
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use SQL::Abstract;
 
@@ -47,9 +47,10 @@ __SQL__
 
 1;
 __END__
+
 =head1 NAME
 
-Class::DBI::Plugin::AggregateFunction - create aggregate function for Class::DBI
+Class::DBI::Plugin::AggregateFunction - aggregate function for Class::DBI
 
 =head1 SYNOPSYS
 
@@ -74,6 +75,7 @@ Class::DBI::Plugin::AggregateFunction - create aggregate function for Class::DBI
 This module is for using an aggregate function easily by Class::DBI.
 
 =head1 HOW TO USE
+
 =head2 Make Metod of Aggregate Function
 
 The aggregate function is added by using the mk_aggregate_function method. 
@@ -122,8 +124,6 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<Class::DBI::AbstractSearch>
-
-L<Class::DBI>
+L<Class::DBI::AbstractSearch>, L<Class::DBI>
 
 =cut

@@ -5,7 +5,7 @@ use Test::More;
 eval "use DBD::SQLite";
 plan skip_all => 'needs DBD::SQLite for testing' if $@;
 
-plan tests => 10;
+plan tests => 12;
 
 use lib 't/lib';
 
@@ -21,6 +21,12 @@ DBCDs    ->_insert_data;
   is DBCDs->min('price'), 1000, 'SELECT MIN(price) FROM cds';
   is DBCDs->sum('price'), 9900, 'SELECT SUM(price) FROM cds';
   is DBCDs->counter('*'),    7, 'SELECT COUNT(*) FROM cds';
+}
+
+# distinct
+{
+  is DBCDs->counter('distinct artist'),  5, 'SELECT COUNT( DISTINCT artist ) FROM cds';
+  is DBCDs->sum    ('distinct artist'), 15, 'SELECT SUM( DISTINCT artist ) FROM cds';
 }
 
 # where

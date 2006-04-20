@@ -4,12 +4,11 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Class::DBI::Plugin::AggregateFunction',
-    AUTHOR              => 'ASAKURA Takuji <asakura@weakpoint.jpn.org>',
+    AUTHOR              => 'ASAKURA Takuji <asakura.takuji+cpan@gmail.com>',
     VERSION_FROM        => 'lib/Class/DBI/Plugin/AggregateFunction.pm',
     ABSTRACT_FROM       => 'lib/Class/DBI/Plugin/AggregateFunction.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'Test::More' => 0,
         'Class::DBI' => 0,
         'SQL::Abstract' => 0,
     },
